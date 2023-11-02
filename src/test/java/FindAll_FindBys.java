@@ -45,6 +45,19 @@ public class FindAll_FindBys {
         driver.quit();
 
     }
+    @Test
+    public void test02() throws InterruptedException {
+        //select class ı kullanarak çözüm
+        driver.navigate().to("https://semantic-ui.com/modules/dropdown.html");
+        driver.manage().window().maximize();
+        Thread.sleep(2000);
+        Actions actions=new Actions(driver);
+        actions.scrollToElement(dropDown).perform();
+        dropDown.click();
+        Select option=new Select(dropDown);
+        option.selectByVisibleText("Turkey");
+
+    }
 
     /**
      * 2.yol @FindAll içine ayrı ayrı yazmak locateleri
@@ -68,7 +81,7 @@ public class FindAll_FindBys {
     })public WebElement turkey1;
 
     @Test
-    public void test02() throws InterruptedException {
+    public void test03() throws InterruptedException {
         driver.navigate().to("https://semantic-ui.com/modules/dropdown.html");
         driver.manage().window().maximize();
         Thread.sleep(2000);
