@@ -34,7 +34,7 @@ public class SesAcmaKapama {
         //ses açma gibi düşün
         actions.clickAndHold(top1).moveByOffset(-20,0).release().perform(); //sola - ile git x ekseni
         actions.clickAndHold(top2).moveByOffset(30,0).release().perform();  //sag direk yaz  x ekseni
-
+        //release() bırak demek
 
 
     }
