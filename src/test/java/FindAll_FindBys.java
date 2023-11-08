@@ -68,6 +68,7 @@ public class FindAll_FindBys {
             @FindBy(how = How.XPATH,using = "//input[@class=\"search\"]")
     })public WebElement dropDown2;
 
+
      @FindAll({
      @FindBy(how = How.CSS,using = "input.search"),
      @FindBy(how = How.XPATH,using = "//div[text()='Select Country']"),
