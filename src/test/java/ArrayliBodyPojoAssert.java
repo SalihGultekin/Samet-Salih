@@ -1,8 +1,12 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
+import pojos.ResponsePojo;
+
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -17,7 +21,7 @@ public class ArrayliBodyPojoAssert {
 
         String body = response.body().asString();
         ObjectMapper mapper = new ObjectMapper();
-        List<ResponseBody> responseBodyList = mapper.readValue(body, new TypeReference<>() {
+        List<ResponsePojo> responseBodyList = mapper.readValue(body, new TypeReference<>() {
         });
         System.out.println(responseBodyList.get(0).getCourses().getMobile().get(2).getCourseTitle());
 
