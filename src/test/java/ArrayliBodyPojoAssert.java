@@ -3,6 +3,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pojos.ResponsePojo;
 
@@ -32,6 +33,6 @@ public class ArrayliBodyPojoAssert {
         List<ResponsePojo> responseBodyList = mapper.readValue(body, new TypeReference<>() {
         });
         System.out.println(responseBodyList.get(0).getCourses().getMobile().get(2).getCourseTitle());
-
+        Assert.assertEquals("Appium",responseBodyList.get(0).getCourses().getMobile().get(2).getCourseTitle());
     }
 }
