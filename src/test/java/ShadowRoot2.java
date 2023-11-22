@@ -15,7 +15,6 @@ public class ShadowRoot2 {
 
         document.querySelector("body > shop-app").shadowRoot.querySelector("iron-pages > shop-home")
          .shadowRoot.querySelector("div:nth-child(2) > shop-button > a")
-
          */
         driver.get("https://shop.polymer-project.org/");
         JavascriptExecutor jse=(JavascriptExecutor) driver;
