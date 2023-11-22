@@ -13,12 +13,20 @@ import static io.restassured.RestAssured.given;
 public class ArrayliBodyPojoAssert {
     @Test
     public void Test2() throws JsonProcessingException {
-        RestAssured.baseURI = "https://6d11d5ef-61dc-4c0b-8a8a-32cf76d0f5d2.mock.pstmn.io";
+       /*
+       RestAssured.baseURI = "https://6d11d5ef-61dc-4c0b-8a8a-32cf76d0f5d2.mock.pstmn.io";
         Response response = given().get("/getInstructor")
                 .then().log().all()
-                .assertThat().statusCode(200)
+                .assertThat().statusCode(200)       // hocanın kodu
                 .extract().response();
+       */
+        //1-Set the url
+        String url = "https://6d11d5ef-61dc-4c0b-8a8a-32cf76d0f5d2.mock.pstmn.io/getInstructor";
 
+        //2- no expected Data
+
+        //3- Send the request and get response
+        Response response = given().when().get(url);
         String body = response.body().asString();
         ObjectMapper mapper = new ObjectMapper();
         List<ResponsePojo> responseBodyList = mapper.readValue(body, new TypeReference<>() {
