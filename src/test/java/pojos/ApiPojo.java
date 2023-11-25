@@ -12,4 +12,5 @@ public class ApiPojo implements Serializable {
 	private String courseTitle;
 	private String price;
 
+
 }
