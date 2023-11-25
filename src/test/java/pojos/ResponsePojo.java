@@ -9,6 +9,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResponsePojo implements Serializable {
+
 	private CoursesPojo courses;
 	private String instructor;
 	private String services;
