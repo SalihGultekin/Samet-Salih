@@ -12,4 +12,6 @@ public class WebAutomationPojo implements Serializable {
 	private String courseTitle;
 	private String price;
 
+
+
 }
