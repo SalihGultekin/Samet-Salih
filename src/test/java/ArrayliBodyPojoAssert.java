@@ -1,7 +1,6 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -12,6 +11,7 @@ import java.util.List;
 import static io.restassured.RestAssured.given;
 
 public class ArrayliBodyPojoAssert {
+    //Önemli bir ayrıntı
     @Test
     public void Test2() throws JsonProcessingException {
        /*
