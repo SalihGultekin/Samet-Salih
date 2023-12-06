@@ -62,6 +62,7 @@ public class FindAll_FindBys {
     /**
      * 2.yol @FindAll içine ayrı ayrı yazmak locateleri
      */
+    //fakat ui da hem xpath hem de css birlikte deneyemezsin
     @FindAll({
             @FindBy(how = How.XPATH,using = "//div[@class=\"dropdown example\"]"),
             @FindBy(how = How.XPATH,using = "//input[@name=\"country\"]"),
