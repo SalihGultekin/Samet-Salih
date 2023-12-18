@@ -80,6 +80,7 @@ public class Iframe {
             }
         }
         driver.switchTo().window(ikinciWindowHandle);
+        //salih
 
     }
 
