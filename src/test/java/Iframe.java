@@ -11,6 +11,6 @@ public class Iframe {
         driver.get("http://www.webdriveruniversity.com");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+        driver.quit();
     }
 }
